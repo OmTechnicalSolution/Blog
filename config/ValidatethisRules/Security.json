@@ -1,0 +1,19 @@
+{"validateThis" : {
+	    "contexts" : [
+	    	{"name":"security","formName":"loginForm"}
+	    ],
+
+	    "objectProperties" : [
+	        {"name":"PhoneOrEmail","desc":"Email or Phone",
+	            "rules": [
+	                {"type":"required", "failureMessage" : "Please enter Email/Phone"}
+	            ]
+	        },
+	        {"name":"Password","desc":"Password to be used for login",
+	            "rules": [
+	                {"type":"required", "failureMessage" : "Please enter Password"}
+	            ]
+	        }
+		]
+	}
+}

@@ -1,0 +1,29 @@
+{"validateThis" : {
+		"contexts" : [
+			{"name" : "Contact", "formName" : "contactForm"}
+		],
+
+		"objectProperties" : [
+			{"name" : "FirstName", "desc" : "FirstName",
+				"rules" : [
+					{"type" : "required", "failureMessage" : "Please enter FirstName"}
+				]
+			},
+			{"name" : "LastName", "desc" : "LastName",
+				"rules" : [
+					{"type" : "required", "failureMessage" : "Please enter LastName"}
+				]
+			},
+			{"name" : "Email","desc" : "Email",
+				"rules" : [
+					{"type" : "required", "failureMessage" : "Please enter Email"}
+				]
+			},
+			{"name" : "Description", "desc" : "Description",
+				"rules" : [
+					{"type" : "required", "failureMessage" : "Please enter your question details."}
+				]
+			}
+		]
+	}
+}

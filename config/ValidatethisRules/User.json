@@ -1,0 +1,41 @@
+{"validateThis" : {
+	    "contexts" : [
+	    	{"name":"User","formName":"SignupForm"},
+	    	{"name":"UserEdit","formName":"EditForm"}
+	    ],
+
+	    "objectProperties" : [
+	       {"name":"Firstname","desc":"Firstname",
+	            "rules": [
+	                {"type":"required","contexts":"*","failureMessage" : "Please enter your First Name"}
+	            ]
+	        },
+	        {"name":"Lastname","desc":"Lastname",
+	            "rules": [
+	                {"type":"required","contexts":"*", "failureMessage" : "Please enter your Last Name"}
+	            ]
+	        },
+	        {"name":"Email","desc":"Email",
+	            "rules": [
+	                {"type":"required","contexts":"*", "failureMessage" : "Please enter your Email"},
+	                {"type":"email","contexts":"*","failureMessage":"Please enter a valid e-mail address."}
+	            ]
+	        },
+	        {"name":"Phone","desc":"Phone",
+	            "rules": [
+	                {"type":"required","contexts":"*", "failureMessage" : "Please enter your Phone"}
+	            ]
+	        },
+	        {"name":"Password","desc":"Password",
+	            "rules": [
+	                {"type":"required","contexts":"*", "failureMessage" : "Please enter your Password"}
+	            ]
+	        },
+	        {"name":"VanityURL","desc":"VanityURL",
+	            "rules": [
+	                {"type":"required","contexts":"UserEdit", "failureMessage" : "Please enter your VanityURL"}
+	            ]
+	        }
+		]
+	}
+}
