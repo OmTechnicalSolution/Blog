@@ -12,7 +12,6 @@
   	addRoute(pattern="/validlogin", handler="security", action="validlogin");
 	// Your Application Routes
 	
-
 	addRoute(":handler/:action/:id");
 	addRoute(":handler/:action");
 	addRoute(":handler");
