@@ -1,9 +1,12 @@
-Options +FollowSymlinks
-
-RewriteEngine On
-
+RewriteEngine on
+#if this call related to adminstrators or non rewrite folders, you can add more here.
+RewriteCond %{REQUEST_URI} ^/(.*(CFIDE|cfide|CFFormGateway|jrunscripts|railo-context|lucee|mapping-tag|fckeditor)).*$
+RewriteRule ^(.*)$ - [NC,L]
+#Images, css, javascript and docs, add your own extensions if needed.
+RewriteCond %{REQUEST_URI} \.(bmp|gif|jpe?g|png|css|js|txt|xls|ico|swf)$
+RewriteRule ^(.*)$ - [NC,L]
+#The ColdBox index.cfm/{path_info} rules.
 RewriteRule ^$ index.cfm [QSA,NS]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.cfm/%{REQUEST_URI} [QSA,L,NS]
-
+RewriteRule ^(.*)$ index.cfm%{REQUEST_URI} [QSA,L,NS]
