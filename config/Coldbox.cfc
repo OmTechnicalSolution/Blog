@@ -71,8 +71,8 @@ component
 
 	// optionally make your own detctor with function detectEnvironment(){}
 	function development() {
-		colbox.debugpassword = "";
-		coldbox.reinitpassword = "1";
+		colbox.debugpassword = "1";
+		coldbox.reinitpassword = "devonly";
 		coldbox.eventCaching = false;
 		coldbox.handlerCaching = false;
 		coldbox.customErrorTemplate = "/coldbox/system/includes/BugReport.cfm";

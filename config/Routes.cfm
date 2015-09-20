@@ -8,8 +8,10 @@
 		setBaseURL("//#cgi.HTTP_HOST#/#getSetting('AppMapping')#");
 	}
   	
-  	addRoute(pattern="/login", handler="security.login", action="login");
-  	addRoute(pattern="/validlogin", handler="security", action="validlogin");
+  	addRoute(pattern="Security/validlogin", handler="Security", action="validlogin");
+  	addRoute(pattern="Main/index", handler="Main", action="index");
+  	addRoute(pattern="Security/login", handler="Security", action="login");
+  	
 	// Your Application Routes
 	
 	addRoute(":handler/:action/:id");

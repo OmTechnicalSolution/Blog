@@ -36,7 +36,7 @@ component
 
 	public boolean function onRequestStart(String targetPage) {
 		// Process ColdBox Request
-		Application.LoginService = createObject("component", "models.cfc.tblLoginDAO");
+		Application.DSN = "MyBlog";
 		application.cbBootstrap.onRequestStart( arguments.targetPage );
 		return true;
 	}

@@ -12,18 +12,19 @@ component output="false" displayname="Security"  {
 		return this;
 	}
 
-	public any function validlogin(event, rc, prc) {
-		writeDump(rc);
-		if(structKeyExists(rc, "username")){
-			writeDump(rc);
-			writedump(Application.LoginService.isValidLogin(rc.username,rc.password));
-		}
-		
+	public function validlogin(rc, prc) {
+		return Application.LoginService.isValidLogin(rc.username,rc.password);
 	}
 
-	public any function login(param) {
-		
-		// writeDump(cgi);
+	public function login(event, rc, prc) {
+		Event.SetLayout('Blank');
+		if(structKeyExists(rc, "username")){
+			IsVaild = validlogin(rc, prc);
+			if(IsVaild.RecordCount){
+				writeDump(IsVaild);
+			}
+		}
+
 	}
 	
 	
