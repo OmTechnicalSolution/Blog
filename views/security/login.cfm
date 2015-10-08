@@ -1,5 +1,5 @@
 <cfoutput>
-	<form action="#event.buildLink('Security.login')#" method="post" ng-submit="expression">
+	<form action="#event.buildLink('Security.login')#" method="post">
 		<div class="modal-content">
 		  	<div class="modal-header">
 		    	<button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-model="">
